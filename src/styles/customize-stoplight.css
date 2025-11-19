@@ -1,0 +1,36 @@
+a.sl-flex.sl-items-center.sl-px-4.sl-py-3.sl-border-t {
+  display: none !important;
+}
+
+/* 🧹 Hide HTTP method badges/icons */
+
+
+.ElementsTableOfContentsItem .sl-icon {
+  display: none !important;
+}
+
+/* .sl-drawer .sl-button[type="button"] {
+  display: none !important;
+  padding-top: 10px !important;
+} */
+
+
+
+
+
+/* Replace X icon with your custom SVG */
+/* Hide the default Stoplight X close icon */
+/* .sl-drawer .sl-button svg {
+  display: none !important;
+} */
+
+/* .sl-drawer .sl-button {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../public/panel-right-open.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none !important;
+  padding: 0 !important;
+} */
