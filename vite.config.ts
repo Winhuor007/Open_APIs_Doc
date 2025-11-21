@@ -22,7 +22,6 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      // Node → Browser polyfills
       buffer: "rollup-plugin-node-polyfills/polyfills/buffer-es6",
       process: "rollup-plugin-node-polyfills/polyfills/process-es6",
       util: "rollup-plugin-node-polyfills/polyfills/util",
@@ -35,6 +34,20 @@ export default defineConfig({
     esbuildOptions: {
       define: {
         global: "globalThis",
+      },
+    },
+  },
+
+  // ✅ ADD THIS SECTION
+  build: {
+    chunkSizeWarningLimit:3000, // Increase bundle size warning limit
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";  // separate vendor bundle
+          }
+        },
       },
     },
   },
